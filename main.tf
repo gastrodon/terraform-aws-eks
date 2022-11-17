@@ -93,7 +93,6 @@ resource "aws_cloudwatch_log_group" "this" {
 
 module "kms" {
   source  = "github.com/gastrodon/terraform-aws-kms"
-  version = "master" # Note - be mindful of Terraform/provider version compatibility between modules
 
   create = local.create && var.create_kms_key
 
